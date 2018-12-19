@@ -33,6 +33,7 @@ class HomeScreen extends Component {
   }
 
   logoutPress = async () => {
+    // clear all local data and navigate to login screen
     await AsyncStorage.clear();
     const resetAction = StackActions.reset({
       index: 0,
@@ -45,6 +46,7 @@ class HomeScreen extends Component {
   }
 
   onListItemClick = (item) => {
+    // navigate to Home detail screen
     this.props.navigation.navigate('HomeDetailScreen', { data: item })
   }
 

@@ -30,6 +30,7 @@ export default class LaunchScreen extends Component {
   }
 
   saveLoginData = async () => {
+    //navigate to home screen
     await AsyncStorage.setItem('userLogin', '1');
     const resetAction = StackActions.reset({
       index: 0,
